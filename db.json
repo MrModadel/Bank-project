@@ -1,3 +1,25 @@
 {
-  "users": []
+  "users": [
+    {
+      "firstname": "Шавкат",
+      "lastname": "Нормуродов",
+      "email": "timanormu@gmail.com",
+      "password": "1",
+      "id": 1
+    },
+    {
+      "firstname": "Шавкат",
+      "lastname": "Нормуродов",
+      "email": "timanormu@gmail.com",
+      "password": "2",
+      "id": 2
+    },
+    {
+      "firstname": "Шавкат",
+      "lastname": "Нормуродов",
+      "email": "timanormu@gmail.com2",
+      "password": "1",
+      "id": 3
+    }
+  ]
 }
