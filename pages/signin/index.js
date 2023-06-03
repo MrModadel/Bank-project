@@ -1,6 +1,4 @@
-import axios from 'axios'
-
-let url = 'http://localhost:5050'
+import { getData } from '../../modules/http';
 
 let form = document.forms.login;
 form.onsubmit = (event) => {
@@ -16,22 +14,18 @@ form.onsubmit = (event) => {
       }
    })
 
+
    if (bulean) {
-      axios.get(url + '/users/')
+      getData("/users?email=" + inUser.email)
          .then(res => {
-            let arr = res.data;
-            let status = true;
-            for (let item of arr) {
-               if (item.email === inUser.email && item.password === inUser.password) {
-                  localStorage.setItem('user', JSON.stringify(item));
-                  status = false;
-                  location.assign('http://localhost:5173/');
-               }
-            }
-            if (status) {
-               alert('Что то пошло не так!')
+            if(res.data[0].password === inUser.password) {
+               delete res.data[0].password
+               localStorage.setItem('user', JSON.stringify(res.data[0]))
+               location.assign('/')
+            } else {
+               alert('wrong password')
             }
          })
-         .catch(err => alert('Что то пошло не так!'))
+
    }
 }

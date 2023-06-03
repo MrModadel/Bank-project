@@ -6,6 +6,13 @@
       "email": "timanormu@gmail.com",
       "password": "1",
       "id": 1
+    },
+    {
+      "firstname": "Daler",
+      "lastname": "Sharifkulov",
+      "email": "dsarifkulo021@gmail.com",
+      "password": "2222",
+      "id": 3
     }
   ]
 }

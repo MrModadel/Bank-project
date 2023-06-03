@@ -1,6 +1,4 @@
-import axios from 'axios'
-
-let url = 'http://localhost:5050'
+import { postData } from '../../modules/http';
 
 let form = document.forms.reg;
 form.onsubmit = (event) => {
@@ -16,12 +14,8 @@ form.onsubmit = (event) => {
       }
    })
    if (b) {
-      axios.post(url + '/users/', obj)
-         .then(res => {
-            if (res.status === 200 || res.status === 201) {
-               location.assign('http://localhost:5173/pages/signin/')
-            }
-         })
+      postData("/users", obj)
+         .then(() => location.assign('http://localhost:5173/pages/signin/'))
    }
    obj = {};
 }
