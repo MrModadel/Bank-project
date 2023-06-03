@@ -1,4 +1,4 @@
-import { postData } from '../../modules/http';
+import { getData, postData } from '../../modules/http';
 
 let form = document.forms.reg;
 form.onsubmit = (event) => {
@@ -14,8 +14,16 @@ form.onsubmit = (event) => {
       }
    })
    if (b) {
-      postData("/users", obj)
-         .then(() => location.assign('http://localhost:5173/pages/signin/'))
+      getData('/users?email=' + obj.email)
+         .then(res => {
+            if (!res.data.length > 0) {
+               postData("/users", obj)
+                  .then(() => location.assign('http://localhost:5173/pages/signin/'))
+            } else {
+               alert('Такой акк уже существует')
+            }
+
+         })
+
    }
-   obj = {};
 }
