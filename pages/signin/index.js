@@ -20,12 +20,18 @@ form.onsubmit = (event) => {
       axios.get(url + '/users/')
          .then(res => {
             let arr = res.data;
+            let status = true;
             for (let item of arr) {
                if (item.email === inUser.email && item.password === inUser.password) {
                   localStorage.setItem('user', JSON.stringify(item));
+                  status = false;
                   location.assign('http://localhost:5173/');
                }
             }
+            if (status) {
+               alert('Что то пошло не так!')
+            }
          })
+         .catch(err => alert('Что то пошло не так!'))
    }
 }
