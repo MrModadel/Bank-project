@@ -1,34 +1,4 @@
 {
   "users": [
-    {
-      "firstname": "Шавкат",
-      "lastname": "Нормуродов",
-      "email": "timanormu@gmail.com",
-      "password": "1",
-      "id": 1
-    },
-    {
-      "firstname": "Daler",
-      "lastname": "Sharifkulov",
-      "email": "dsarifkulo021@gmail.com",
-      "password": "2222",
-      "id": 3
-    },
-    {},
-    {},
-    {
-      "firstname": "Шавкат",
-      "lastname": "Нормуродов",
-      "email": "timanormu@gmail.com2",
-      "password": "1",
-      "id": 4
-    },
-    {
-      "firstname": "Шавкат",
-      "lastname": "Нормуродов",
-      "email": "timanormu@gmail.com9",
-      "password": "1",
-      "id": 5
-    }
   ]
 }
