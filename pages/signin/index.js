@@ -54,5 +54,7 @@ form.onsubmit = (event) => {
                textError(info, p, 'Такого Адресе не существует')
             }
          })
+   } else{
+      textError(info, p, 'Заполните все поля')
    }
 }
