@@ -30,10 +30,6 @@
             </div>
          </div>
       </header><!-- /header -->
-      <script>
-         let email = document.querySelector('.header__user-menu .header__text');
-         email.innerText = user.email;
-      </script>
       <main class="main">
          <div class="top-title container">
             <div class="top-title__title">Добро пожаловать, Alex Adams!</div>
@@ -70,6 +66,13 @@
          </div>
       </main>
    </div>
+   <script>
+      let texts = document.querySelectorAll('.header__user-menu .header__text ,.top-title__text');
+      texts.forEach(text=>{
+         text.innerText = user.email;
+
+      })
+   </script>
    <script src="main.js"></script>
 </body>
 
